@@ -1,4 +1,4 @@
-Ici toutes les notes sur des commandes linux pouvant collecter des infos (system, mem, network, etc..)
+# Ici toutes les notes sur des commandes linux pouvant collecter des infos (system, mem, network, etc..)
 
 -- Affiche les informations sur la Carte mère et Bios (en root) 
  dmidecode
