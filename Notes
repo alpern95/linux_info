@@ -1,2 +1,13 @@
 -- Affiche les informations sur la Carte mère et Bios (en root) 
  dmidecode
+
+RAM : free -m
+Processeur : lscpu - cat /proc/cpuinfo
+Carte graphique : lspci | grep VGA
+Liste des périphériques du bus PCI : lspci
+Liste des périphériques USB : lsusb
+Interfaces réseau : ifconfig
+Espace disque et pourcentage d'occupation : df -h
+Partition swap : swapon -s
+Machine (noyau, nom de machine...) : uname -a
+Informations de fonctionnement : uptime, top, ps, who, vmstat ...
