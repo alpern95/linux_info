@@ -1,3 +1,5 @@
+Ici toutes les notes sur des commandes linux pouvant collecter des infos (system, mem, network, etc..)
+
 -- Affiche les informations sur la Carte mère et Bios (en root) 
  dmidecode
 
@@ -11,3 +13,7 @@ Espace disque et pourcentage d'occupation : df -h
 Partition swap : swapon -s
 Machine (noyau, nom de machine...) : uname -a
 Informations de fonctionnement : uptime, top, ps, who, vmstat ...
+
+-- Savoir si on est sur une machine virtuelle  (en root) 
+dmidecode -s chassis-manufacturer
+QEMU
