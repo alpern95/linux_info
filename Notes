@@ -1,0 +1,2 @@
+-- Affiche les informations sur la Carte mère et Bios (en root) 
+ dmidecode
