@@ -17,3 +17,7 @@ Informations de fonctionnement : uptime, top, ps, who, vmstat ...
 -- Savoir si on est sur une machine virtuelle  (en root) 
 dmidecode -s chassis-manufacturer
 QEMU
+
+Sur une machiene physique.
+dmidecode -s baseboard-manufacturer
+ASUSTeK Computer INC.
