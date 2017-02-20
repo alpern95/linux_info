@@ -17,3 +17,7 @@ Informations de fonctionnement : uptime, top, ps, who, vmstat ...
 -- Savoir si on est sur une machine virtuelle  (en root) 
 dmidecode -s chassis-manufacturer
 QEMU
+
+Sur le Site Oxidized on trouve un model de sauvgarde de linux.
+##############################################################"
+https://github.com/ytti/oxidized/blob/master/lib/oxidized/model/cumulus.rb
