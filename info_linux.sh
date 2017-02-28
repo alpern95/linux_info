@@ -3,53 +3,75 @@
 echo "============="
 echo "Etat Versions"
 echo "============="
-echo "Redhat Release : "
-cat /etc/redhat-release
+echo "Linux Release : "
+cat /etc/*{release,version}
 echo "/proc/version : "
 cat /proc/version
 uname -a
-echo "============"
+echo "============="
 echo "Etat Network"
-echo "============"
+echo "============="
+echo "==== Hostname :"
 hostname -s
+echo "==== Domain name :"
 domainname -s
 
-if type ifconfig > /dev/null 2>&1 ;
-then
-  ifconfig eth0
-  ifconfig eth1
-fi
 if type /usr/sbin/ip > /dev/null 2>&1 ;
 then
   echo "==== ip link "
   ip l
-  echo "==== ip address"
+  echo "==== ip adress"
   ip -4 address show
-  echo "==== ip route"
+  echo "==== ip route "
   ip r
+else
+  ifconfig
 fi
 
-echo "============"
-echo "reverse path   "
-echo "============"
+echo "============="
+echo "Machine virtuelle"
+echo "============="
+dmidecode -s system-product-name
+
+echo "============="
+echo "reverse path "
+echo "============="
 sysctl -a | grep \\.rp_filter
-echo "============"
+echo "============="
 echo "SE Linus et Iptable"
-echo "============"
+echo "============="
 sestatus
-/etc/init.d/iptables status
-echo "============"
+echo "Firewalld status :"
+if [ -e "/etc/init.d/iptables" ]
+then
+  /etc/init.d/iptables status
+else
+  systemctl status firewalld | grep Active
+fi
+
+echo "============="
+echo "Etat Memoire"
+echo "============="
+cat /proc/meminfo | grep Mem
+
+echo "============="
 echo "Etat Volumes"
-echo "============"
+echo "============="
 df -h
 mount
-echo "========="
+echo "============="
 echo "Etat Boot"
-echo "========="
-dmesg | grep -q "EFI v"    # -q tell grep to output nothing
-if [ $? -eq 0 ]      # check exit code; if 0 EFI, else BIOS
+echo "============="
+dmesg | grep -q "EFI v"		# -q tells grep to output nothing
+if [ $? -eq 0 ] 	#check exit code; if 0 EFI, else BIOS
 then
     echo "You are using EFI boot."
   else
-    echo "You are using BIOS boot"
+    cat /var/log/dmesg.old | grep -q "EFI v"
+    if [ $? -eq 0 ]
+    then
+        echo "You are using EFI boot"
+      else
+        echo "You are using BIOS boot"
+    fi
 fi
