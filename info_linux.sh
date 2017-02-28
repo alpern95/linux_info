@@ -28,9 +28,9 @@ else
   ifconfig
 fi
 
-echo "============="
-echo "Machine virtuelle"
-echo "============="
+echo "=============="
+echo "System Product"
+echo "=============="
 dmidecode -s system-product-name
 
 echo "============="
