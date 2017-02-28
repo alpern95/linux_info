@@ -8,6 +8,7 @@ cat /etc/*{release,version}
 echo "/proc/version : "
 cat /proc/version
 uname -a
+echo " "
 echo "============="
 echo "Etat Network"
 echo "============="
@@ -27,16 +28,17 @@ then
 else
   ifconfig
 fi
-
+echo " "
 echo "=============="
 echo "System Product"
 echo "=============="
 dmidecode -s system-product-name
-
+echo " "
 echo "============="
 echo "reverse path "
 echo "============="
 sysctl -a | grep \\.rp_filter
+echo " "
 echo "============="
 echo "SE Linus et Iptable"
 echo "============="
@@ -48,17 +50,18 @@ then
 else
   systemctl status firewalld | grep Active
 fi
-
+echo " "
 echo "============="
 echo "Etat Memoire"
 echo "============="
 cat /proc/meminfo | grep Mem
-
+echo " "
 echo "============="
 echo "Etat Volumes"
 echo "============="
 df -h
 mount
+echo " "
 echo "============="
 echo "Etat Boot"
 echo "============="
