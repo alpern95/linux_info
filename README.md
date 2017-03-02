@@ -1,5 +1,5 @@
 # linux_info
-get linux info in a bash script
+## get linux info in a bash script
 
 Version du l'os linux
 
@@ -14,6 +14,8 @@ Réseaux
   interface link layer
   interface ip layer
   routage (ip r)
+
+Nombre de CPU
 
 Boot Type EFI? legacy? UEFI?
 
