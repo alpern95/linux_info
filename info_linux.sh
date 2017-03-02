@@ -56,6 +56,11 @@ echo "Etat Memoire"
 echo "============="
 cat /proc/meminfo | grep Mem
 echo " "
+echo "=============="
+echo "Nomobre de CPU"
+echo "=============="
+cat /proc/cpuinfo | grep processor | wc -l
+echo " "
 echo "============="
 echo "Etat Volumes"
 echo "============="
