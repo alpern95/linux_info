@@ -1,6 +1,8 @@
 # linux_info
-## get linux info in a bash script
-try to be compatible with any linux distribution and any linux version
+## get linux infos, facts, with a bash script
+Trying to be compatible with any linux distributions and any linux versions
+Trying to use linux natives commands to avoid any complementary package.
+
 
 Keep trace of
 - Version of linux os
