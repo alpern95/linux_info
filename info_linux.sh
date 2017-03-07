@@ -73,13 +73,13 @@ echo "============="
 dmesg | grep -q "EFI v"		# -q tells grep to output nothing
 if [ $? -eq 0 ] 	#check exit code; if 0 EFI, else BIOS
 then
-    echo "You are using EFI boot."
+    echo "You are using EFI boot mode."
   else
     cat /var/log/dmesg.old | grep -q "EFI v"
     if [ $? -eq 0 ]
     then
-        echo "You are using EFI boot"
+        echo "You are using EFI boot mode"
       else
-        echo "You are using BIOS boot"
+        echo "You are not using EFI boot mode"
     fi
 fi
