@@ -90,6 +90,6 @@ then
   echo "==== List installed rpm"
   rpm -qa --qf '%{NAME} %{VERSION} %{ARCH} rpm %{SUMMARY}\n' | sort
 else
-  echo "Cannot collecte rpm, perhaps ouy are not on centos or redhad."
+  echo "Cannot collecte rpm, perhaps you are not on centos or redhad."
 fi
 
