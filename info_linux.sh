@@ -83,3 +83,13 @@ then
         echo "You are not using EFI boot mode"
     fi
 fi
+echo " "
+
+if type /usr/bin/rpm > /dev/null 2>&1 ;
+then
+  echo "==== List installed rpm"
+  rpm -qa --qf '%{NAME} %{VERSION} %{ARCH} rpm %{SUMMARY}\n' | sort
+else
+  echo "Cannot collecte rpm, perhaps ouy are not on centos or redhad."
+fi
+
