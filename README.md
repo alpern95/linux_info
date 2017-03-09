@@ -10,7 +10,7 @@ Keep trace of
 - version of kernel
 - Selinux Mode
 - Firewwal state 
-- reverse path
+- reverse path filter
 
 Network
 - Name 
