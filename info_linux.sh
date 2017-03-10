@@ -21,6 +21,8 @@ echo "==== Local Domain"
 hostname --nis
 echo "==== long host name (FQDN)"
 hostname -f
+echo "==== Show current hostname settings"
+hostnamectl status
 
 if type /usr/sbin/ip > /dev/null 2>&1 ;
 then
