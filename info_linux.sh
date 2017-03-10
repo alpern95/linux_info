@@ -9,6 +9,7 @@ echo "/proc/version : "
 cat /proc/version
 uname -a
 echo " "
+
 echo "============="
 echo "Etat Network"
 echo "============="
@@ -16,6 +17,10 @@ echo "==== Hostname :"
 hostname -s
 echo "==== Domain name :"
 domainname -s
+echo "==== Local Domain"
+hostname --nis
+echo "==== long host name (FQDN)"
+hostname -f
 
 if type /usr/sbin/ip > /dev/null 2>&1 ;
 then
