@@ -58,7 +58,7 @@ if [ -e "/etc/init.d/iptables" ]
 then
   /etc/init.d/iptables status
 else
-  systemctl status firewalld | grep Active
+  systemctl status firewalld | grep 'Loaded\|Active'
 fi
 echo " "
 echo "============="
