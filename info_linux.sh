@@ -22,7 +22,10 @@ hostname --nis
 echo "==== long host name (FQDN)"
 hostname -f
 echo "==== Show current hostname settings"
+if type hostnamectl > /dev/null 2>&1 ;
+then
 hostnamectl status
+fi
 
 if type /usr/sbin/ip > /dev/null 2>&1 ;
 then
