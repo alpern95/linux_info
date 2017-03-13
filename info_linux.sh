@@ -67,7 +67,7 @@ echo "============="
 cat /proc/meminfo | grep Mem
 echo " "
 echo "=============="
-echo "Nomobre de CPU"
+echo "Nombre de CPU"
 echo "=============="
 cat /proc/cpuinfo | grep processor | wc -l
 echo " "
