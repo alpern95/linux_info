@@ -95,11 +95,21 @@ then
 fi
 echo " "
 
+echo "============="
+echo "Packet Linux"
+echo "============="
+
 if type /usr/bin/rpm > /dev/null 2>&1 ;
 then
-  echo "==== List installed rpm"
+  echo "==== Installed rpm"
   rpm -qa --qf '%{NAME} %{VERSION} %{ARCH} rpm %{SUMMARY}\n' | sort
 else
-  echo "Cannot collecte rpm, perhaps you are not on centos or redhad."
+  if type /usr/bin/dpkg-query > /dev/null 2>&1 ;
+  then
+    echo "==== Installed dpkg"
+    sudo dpkg-query -l | sort
+  else
+    echo "Cannot collecte apt or rpm , perhaps you are not on redhat, centos, debian or ubuntu."
+  fi
 fi
 
