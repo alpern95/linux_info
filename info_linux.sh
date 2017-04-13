@@ -5,8 +5,10 @@ echo "DATE et Uptime"
 echo "=============="
 echo "Date : "
 date
+echo " "
 echo "UpTime : "
 uptime
+echo " "
 echo "============="
 echo "Etat Versions"
 echo "============="
