@@ -1,5 +1,12 @@
 #!/bin/sh
 #if type /opt/BSMHW_NG/bin/bsmsensor.sh > /dev/null 2>&1 ; then
+echo "=============="
+echo "DATE et Uptime"
+echo "=============="
+echo "Date : "
+date
+"UpTime : "
+uptime
 echo "============="
 echo "Etat Versions"
 echo "============="
