@@ -118,12 +118,12 @@ else
     echo "==== Installed dpkg"
     sudo dpkg-query -l | sort
   else
-    echo "Cannot collecte apt or rpm , perhaps you are not on redhat, centos, debian or ubuntu."
+    if type /bin/rpm
+    then
+      echo "==== Installed rpm"
+      rpm -qa --qf '%{NAME} %{VERSION} %{ARCH} rpm %{SUMMARY}\n' | sort
+    else
+      echo "Cannot collecte apt or rpm , perhaps you are not on redhat, centos, debian or ubuntu."
+    fi
   fi
-fi
-# for centos redhat 6.x
-if type /bin/rpm
-  then
-    echo "==== Installed rpm"
-    rpm -qa --qf '%{NAME} %{VERSION} %{ARCH} rpm %{SUMMARY}\n' | sort
 fi
