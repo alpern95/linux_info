@@ -45,7 +45,19 @@ then
   echo "==== ip route "
   ip r
 else
-  ifconfig
+  echo " "
+fi
+if type /sbin/ip  > /dev/null 2>&1 ;
+then
+  echo "==== ip link "
+  ip l
+  echo "==== ip adress"
+  ip -4 address show
+  echo "==== ip route "
+  ip r
+else
+ ifconfig
+ route
 fi
 echo " "
 echo "=============="
