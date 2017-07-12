@@ -95,14 +95,18 @@ echo " "
 echo "============="
 echo "Etat Volumes"
 echo "============="
-if type type blkid > /dev/null 2>&1 ;
+if type blkid > /dev/null 2>&1 ;
 then
   echo "==== locate/print block device attributes "
   blkid
 fi
+if type lsblk > /dev/null 2>&1 ;
+then
+  echo "==== list block devices "
+  lsblk --output NAME,FSTYPE,LABEL,UUID,MODE
+fi
 echo "==== commande df "
 df -h
-
 echo "==== commande mount "
 mount
 echo " "
