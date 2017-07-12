@@ -95,6 +95,11 @@ echo " "
 echo "============="
 echo "Etat Volumes"
 echo "============="
+if type type blkid > /dev/null 2>&1 ;
+then
+  echo "==== locate/print block device attributes "
+  blkid
+fi
 df -h
 mount
 echo " "
