@@ -100,7 +100,10 @@ then
   echo "==== locate/print block device attributes "
   blkid
 fi
+echo "==== commande df "
 df -h
+
+echo "==== commande mount "
 mount
 echo " "
 echo "============="
