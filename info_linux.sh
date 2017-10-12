@@ -151,3 +151,11 @@ else
     fi
   fi
 fi
+echo "==== End of Installed rpm"
+echo " "
+echo "================================="
+echo "Is Cpu supported Virtualization? "
+echo "================================="
+echo "If something shows up, you have VT."
+egrep '^flags.*(vmx|svm)' /proc/cpuinfo
+
