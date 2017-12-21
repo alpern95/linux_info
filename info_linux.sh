@@ -30,7 +30,7 @@ echo "==== Local Domain"
 hostname --nis
 echo "==== long host name (FQDN)"
 hostname -f
-
+echo " "
 echo "================"
 echo "Network Configs "
 echo "================"
