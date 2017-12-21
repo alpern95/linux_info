@@ -30,6 +30,18 @@ echo "==== Local Domain"
 hostname --nis
 echo "==== long host name (FQDN)"
 hostname -f
+
+echo "================"
+echo "Network Configs "
+echo "================"
+
+# centos , redhat
+[ -d "/etc/sysconfig/network-scripts/" ] && tail -vn +1 /etc/sysconfig/network-scripts/ifcfg-*
+
+# Faire de meme pour debian  ubuntu
+[ -d "/etc/network/interfaces" ] && tail -vn +1 /etc/network/interfaces*
+echo " "
+
 echo "==== Show current hostname settings"
 if type hostnamectl > /dev/null 2>&1 ;
 then
