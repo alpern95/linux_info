@@ -39,7 +39,7 @@ echo "================"
 [ -d "/etc/sysconfig/network-scripts/" ] && tail -vn +1 /etc/sysconfig/network-scripts/ifcfg-*
 
 # Faire de meme pour debian  ubuntu
-[ -d "/etc/network/interfaces" ] && tail -vn +1 /etc/network/interfaces*
+[ -d "/etc/network/" ] && tail -vn +1 /etc/network/interfaces*
 echo " "
 
 echo "==== Show current hostname settings"
