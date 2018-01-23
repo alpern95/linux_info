@@ -18,7 +18,11 @@ echo "/proc/version : "
 cat /proc/version
 uname -a
 echo " "
-
+echo "==============================="
+echo "Language  environment variable "
+echo "==============================="
+env | grep LANG
+echo " "
 echo "============="
 echo "Etat Network"
 echo "============="
