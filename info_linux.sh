@@ -144,6 +144,17 @@ then
 fi
 echo " "
 
+echo "============================"
+echo "Packet Linux For Double-take"
+echo "============================"
+rpm -qa parted
+rpm -qa dmidecode
+rpm -qa perl-devel
+echo "perl-devel is a part of lsb"
+rpm -qa which
+echo "if you have the parted dmidecode perl-devel wich you can install Double-Take"
+echo ""
+
 echo "============="
 echo "Packet Linux"
 echo "============="
