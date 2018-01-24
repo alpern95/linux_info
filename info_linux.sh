@@ -150,9 +150,11 @@ echo "============================"
 rpm -qa parted
 rpm -qa dmidecode
 rpm -qa perl-devel
+rpm -qa net-tools
+rpm -qa ethtool
 echo "perl-devel is a part of lsb"
 rpm -qa which
-echo "if you have the parted dmidecode perl-devel wich you can install Double-Take"
+echo "if you have the parted dmidecode perl-devel wich ethtool net-tools you can install Double-Take"
 echo ""
 
 echo "============="
