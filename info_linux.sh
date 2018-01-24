@@ -154,7 +154,7 @@ rpm -qa net-tools
 rpm -qa ethtool
 echo "perl-devel is a part of lsb"
 rpm -qa which
-echo "if you have the parted dmidecode perl-devel wich ethtool net-tools you can install Double-Take"
+echo "if you have the package parted dmidecode perl-devel which ethtool net-tools you can install Double-Take"
 echo ""
 
 echo "============="
