@@ -149,6 +149,7 @@ if type systemctl > /dev/null 2>&1 ;
   then
     systemctl list-units | grep running | sed 's/ .*//'
   else
+    # todo grep ou sed for arrete or stoped
     service --status-all
 fi
 echo " "
