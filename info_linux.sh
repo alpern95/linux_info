@@ -126,22 +126,33 @@ df -h
 echo "==== commande mount "
 mount
 echo " "
-echo "================="
-echo "services enabled "
-echo "================="
-if type chkconfig > /dev/null 2>&1 ;
-then
-  echo "==== Services for Centos < 7 "
-  # for french version
-  chkconfig --list | grep 3:marche | sed 's/ .*//'
-  # for english version
-  chkconfig --list | grep 3:on | sed 's/ .*//'
-fi
+echo "================================="
+echo "services enabled or chkconfig on "
+echo " doesnt include manuel started   "
+echo "================================="
 if type systemctl > /dev/null 2>&1 ;
-then
-  echo "==== Services for Centos > 6 "
-  # for french version
-  systemctl list-unit-files | grep enabled
+  then
+    echo "==== Services for Centos > 6 "
+    # for french version
+    systemctl list-unit-files | grep enabled
+  else 
+    if type chkconfig > /dev/null 2>&1 ;
+      echo "==== Services for Centos < 7 "
+      # for french version
+      chkconfig --list | grep 3:marche | sed 's/ .*//'
+      # for english version
+      chkconfig --list | grep 3:on | sed 's/ .*//'
+    fi
+fi
+echo "========================================"
+echo "services running include manual started "
+echo "========================================"
+if type systemctl > /dev/null 2>&1 ;
+  then
+    systemctl list-units | grep running | sed 's/ .*//'
+  else
+    echo "todo"
+    # todo
 fi
 echo " "
 echo "============="
