@@ -149,8 +149,7 @@ if type systemctl > /dev/null 2>&1 ;
   then
     systemctl list-units | grep running | sed 's/ .*//'
   else
-    echo "todo"
-    # todo
+    service --status-all
 fi
 echo " "
 echo "============="
