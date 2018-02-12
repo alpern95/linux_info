@@ -136,13 +136,11 @@ if type systemctl > /dev/null 2>&1 ;
     # for french version
     systemctl list-unit-files | grep enabled
   else 
-    if type chkconfig > /dev/null 2>&1 ;
-      echo "==== Services for Centos < 7 "
-      # for french version
-      chkconfig --list | grep 3:marche | sed 's/ .*//'
-      # for english version
-      chkconfig --list | grep 3:on | sed 's/ .*//'
-    fi
+    echo "==== Services for Centos < 7 "
+    # for french version
+    chkconfig --list | grep 3:marche | sed 's/ .*//'
+    # for english version
+    chkconfig --list | grep 3:on | sed 's/ .*//'
 fi
 echo "========================================"
 echo "services running include manual started "
