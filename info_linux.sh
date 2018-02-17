@@ -13,9 +13,10 @@ echo "============="
 echo "Etat Versions"
 echo "============="
 echo "Linux Release : "
-cat /etc/*{release,version}
-echo "/proc/version : "
-cat /proc/version
+/bin/cat /etc/*release
+echo "Linux Version : "
+/bin/cat /etc/*version
+#cat /etc/*{release,version}
 uname -a
 echo " "
 echo "==============================="
