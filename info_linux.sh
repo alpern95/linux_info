@@ -39,7 +39,9 @@ echo " "
 echo "================"
 echo "Network Configs "
 echo "================"
-
+echo "Network Controller"
+lspci | grep "Ethernet controller"
+echo " "
 # centos , redhat
 [ -d "/etc/sysconfig/network-scripts/" ] && tail -vn +1 /etc/sysconfig/network-scripts/ifcfg-*
 
