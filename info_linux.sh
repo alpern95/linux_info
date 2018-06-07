@@ -84,6 +84,8 @@ echo "System Product"
 echo "=============="
 dmidecode -s system-product-name
 echo " "
+cat /proc/cpuinfo | grep 'model name'
+echo " "
 echo "============="
 echo "reverse path "
 echo "============="
